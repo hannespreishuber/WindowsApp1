@@ -25,8 +25,18 @@ Public Class Form1
         Dim s = "es ist jetzt " + d.ToString("dd. MMM. yyyy") + " Uhrzeit"
         Dim s2 = $"es ist jetzt {d:dd. MMM. yyyy} Uhreit"
         Dim erg2 = rechne.Add(1, 1)
+        Dim ar(5) As Integer
+        ar(0) = 1
+
+        Dim name1 As New List(Of String)
+        name1.Add("hanes")
 
         Dim namen() = {"Franz", "Sepp", "Peter", "Beat"}
+        'LINQ
+        Dim result = From t In namen Where t.Contains("e") Select t
+
+
+
         namen(0) = "test"
         Dim xml = <root>
                       <%= From s3 In namen Select
