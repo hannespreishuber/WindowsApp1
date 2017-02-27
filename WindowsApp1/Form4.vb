@@ -12,5 +12,10 @@ Public Class Form4
         End Using
         Dim ort = liste.Where(Function(o) o.plz = "84489").ToList
 
+
+        Dim temp As Double = 286.67
+        Dim cels = temp.ConvertoCelsius
+        Dim s = "Hannes"
+        Dim s1 = s.add()
     End Sub
 End Class

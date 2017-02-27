@@ -13,6 +13,7 @@
     End Function
 
     Public Property Name As String
+
     Public Property ID As Integer
     Private Class test
 
