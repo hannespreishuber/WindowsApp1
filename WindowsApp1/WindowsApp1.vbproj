@@ -115,6 +115,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Person.vb" />
+    <Compile Include="ppedv\privtest.vb" />
+    <Compile Include="privtest.vb" />
     <Compile Include="rechne.vb" />
     <Compile Include="UserControl1.Designer.vb">
       <DependentUpon>UserControl1.vb</DependentUpon>
