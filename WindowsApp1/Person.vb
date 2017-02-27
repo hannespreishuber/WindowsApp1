@@ -1,4 +1,5 @@
 ﻿Public Class Person
+    Implements IDisposable
     Public Sub New()
 
     End Sub
@@ -16,4 +17,9 @@
     Private Class test
 
     End Class
+
+
+    Public Sub Dispose() Implements IDisposable.Dispose
+
+    End Sub
 End Class
