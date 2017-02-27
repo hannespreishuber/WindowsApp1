@@ -14,7 +14,7 @@ Public Class rechne
     End Property
 
     Public Property test As String = "test"
-
+    'test kommentar
 
 
     Public Property ID As String Implements Interface1.ID
