@@ -7,7 +7,7 @@ Public Class Rootobject
     Public Property message As Single
     Public Property cnt As Integer
     <JsonProperty("list")>
-    Public Property wlist() As Liste
+    Public Property wlist As List(Of Liste)
 End Class
 
 Public Class City
