@@ -11,7 +11,7 @@ Public Class Form11
         While rd.Read()
             liste.Add(New vorname1 With {.ID = rd("id"), .vorname = rd("vorname")})
         End While
-
+        con.Close()
         DataGridView1.DataSource = liste.ToList
     End Sub
 End Class
