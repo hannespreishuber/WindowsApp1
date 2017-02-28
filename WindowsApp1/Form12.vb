@@ -9,7 +9,13 @@
         ef.vornamen.Add(New vornamen With {.vorname = TextBox1.Text})
         ef.SaveChanges()
 
+        'Dim p = ef.vornamen.Find(1)
+        'p.vorname = "neu"
+        'ef.SaveChanges()
 
+        'Dim p = ef.vornamen.Find(1)
+        'ef.vornamen.Remove(p)
+        'ef.SaveChanges()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
