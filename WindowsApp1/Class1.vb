@@ -1,69 +1,51 @@
 ﻿
+Imports Newtonsoft.Json
+
 Public Class Rootobject
+    Public Property city As City
     Public Property cod As String
     Public Property message As Single
     Public Property cnt As Integer
-    Public Property list() As List
-    Public Property city As City
+    <JsonProperty("list")>
+    Public Property wlist() As Liste
 End Class
 
 Public Class City
     Public Property id As Integer
-    Public Property [name] As String
+    Public Property name As String
     Public Property coord As Coord
     Public Property country As String
+    Public Property population As Integer
 End Class
 
 Public Class Coord
-    Public Property lat As Single
     Public Property lon As Single
+    Public Property lat As Single
 End Class
 
-Public Class List
+Public Class Liste
     Public Property dt As Integer
-    Public Property main As Main
-    Public Property weather() As Weather
-    Public Property clouds As Clouds
-    Public Property wind As Wind
-    Public Property sys As Sys
-    Public Property dt_txt As String
-    Public Property rain As Rain
-    Public Property snow As Snow
-End Class
-
-Public Class Main
-    Public Property temp As Single
-    Public Property temp_min As Single
-    Public Property temp_max As Single
+    Public Property temp As Temp
     Public Property pressure As Single
-    Public Property sea_level As Single
-    Public Property grnd_level As Single
     Public Property humidity As Integer
-    Public Property temp_kf As Single
-End Class
-
-Public Class Clouds
-    Public Property all As Integer
-End Class
-
-Public Class Wind
+    Public Property weather As List(Of Wetter)
     Public Property speed As Single
-    Public Property deg As Single
+    Public Property deg As Integer
+    Public Property clouds As Integer
+    Public Property rain As Single
+    Public Property snow As Single
 End Class
 
-Public Class Sys
-    Public Property pod As String
+Public Class Temp
+    Public Property day As Single
+    Public Property min As Single
+    Public Property max As Single
+    Public Property night As Single
+    Public Property eve As Single
+    Public Property morn As Single
 End Class
 
-Public Class Rain
-    Public Property _3h As Single
-End Class
-
-Public Class Snow
-    Public Property _3h As Single
-End Class
-
-Public Class Weather
+Public Class Wetter
     Public Property id As Integer
     Public Property main As String
     Public Property description As String
