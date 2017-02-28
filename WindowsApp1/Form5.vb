@@ -6,25 +6,25 @@
     Dim offx, offy As Integer
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles Me.Load
-        'AddHandler Label1.MouseDown, AddressOf lblDown
-        'AddHandler Label1.MouseUp, AddressOf lblUp
+        AddHandler PictureBox1.MouseDown, AddressOf lblDown
+        AddHandler PictureBox1.MouseUp, AddressOf lblUp
         Me.AllowDrop = True
     End Sub
 
-    Private Sub lblUp(sender As Object, e As MouseEventArgs) Handles Label1.MouseUp
-        RemoveHandler Label1.MouseMove, AddressOf lblMove
+    Private Sub lblUp(sender As Object, e As MouseEventArgs)
+        RemoveHandler Me.MouseMove, AddressOf lblMove
     End Sub
 
-    Private Sub lblDown(sender As Object, e As MouseEventArgs) Handles Label1.MouseDown
-        offx = e.X - Label1.Left
-        offy = e.Y - Label1.Top
-        AddHandler Label1.MouseMove, AddressOf lblMove
+    Private Sub lblDown(sender As Object, e As MouseEventArgs)
+        offx = e.X - PictureBox1.Left
+        offy = e.Y - PictureBox1.Top
+        AddHandler Me.MouseMove, AddressOf lblMove
     End Sub
 
     Private Sub lblMove(sender As Object, e As MouseEventArgs)
 
-        Label1.Top = e.Y + offy
-        Label1.Left = e.X + offx
+        PictureBox1.Top = e.Y - offy
+        PictureBox1.Left = e.X - offx
         Debug.WriteLine(e.Y)
     End Sub
 
