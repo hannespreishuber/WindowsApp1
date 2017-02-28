@@ -38,6 +38,14 @@ Public Class Form8
                         Order By o.ort
                         Select o
 
+        'Dim eachliste As New List(Of plzort)
+        'For Each oo In liste
+        '    If oo.plz.Contains(TextBox1.Text) Then
+        '        eachliste.Add(oo)
+        '    End If
+        'Next
+
+
         Dim mylist = suchliste.ToList
         watch.Stop()
 
