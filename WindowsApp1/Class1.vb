@@ -25,7 +25,15 @@ End Class
 
 Public Class Liste
     Public Property dt As Integer
-    Public Property temp As Temp
+    Private _datum As Date
+    Public ReadOnly Property datum() As Date
+        Get
+            Dim d = New Date(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+            Return d.AddSeconds(dt)
+        End Get
+
+    End Property
+    Public Property temp As Temp1
     Public Property pressure As Single
     Public Property humidity As Integer
     Public Property weather As List(Of Wetter)
@@ -36,13 +44,16 @@ Public Class Liste
     Public Property snow As Single
 End Class
 
-Public Class Temp
+Public Class Temp1
     Public Property day As Single
     Public Property min As Single
     Public Property max As Single
     Public Property night As Single
     Public Property eve As Single
     Public Property morn As Single
+    Public Overrides Function ToString() As String
+        Return Me.day.ToString + "°"
+    End Function
 End Class
 
 Public Class Wetter
