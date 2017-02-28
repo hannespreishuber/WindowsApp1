@@ -1,4 +1,5 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Configuration
+Imports System.Data.SqlClient
 
 Public Class Form11
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -8,7 +9,10 @@ Public Class Form11
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim conn = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\pre\documents\visual studio 2017\Projects\WindowsApp1\WindowsApp1\Database1.mdf"";Integrated Security=True"
         Dim con = New SqlConnection(conn)
-        Dim cmd = New SqlCommand("select * from vornamen where vorname like '%'+@suche+'%'", con)
+        'Dim cmd = New SqlCommand("select * from vornamen where vorname like '%'+@suche+'%'", con)
+
+        Dim cmd = New SqlCommand(ConfigurationSettings.AppSettings("sql1"), con)
+
         ' cmd.Parameters.Add(New SqlParameter("suche", TextBox1.Text))
         cmd.Parameters.AddWithValue("suche", TextBox1.Text)
         Dim liste As New List(Of vorname1)
