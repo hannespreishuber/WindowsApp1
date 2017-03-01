@@ -10,4 +10,7 @@ Module Module1
     Public Function add(a As String) As String
         Return a + a
     End Function
+
+
+
 End Module
