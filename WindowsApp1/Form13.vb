@@ -22,4 +22,8 @@
                     End Sub)
 
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ticktack.Change(Threading.Timeout.Infinite, Threading.Timeout.Infinite)
+    End Sub
 End Class
