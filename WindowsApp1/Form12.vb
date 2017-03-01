@@ -1,6 +1,10 @@
-﻿Public Class Form12
+﻿Imports System.Dynamic
+Imports System.Runtime.InteropServices
+
+Public Class Form12
     Dim ef As New Model1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
 
         DataGridView1.DataSource = ef.vornamen.ToList
     End Sub

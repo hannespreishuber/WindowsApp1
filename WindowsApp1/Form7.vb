@@ -6,7 +6,9 @@
         'l.length 
         ' s.Count LINQ
         ' Dim liste As List(Of String) = New List(Of String)
-        Dim liste As New List(Of String)
+        Dim ding As Boolean?
+
+        Dim liste As List(Of String)
 
         'liste.Item(1) liste(1)
         If Not liste Is Nothing AndAlso liste.Count > 1 Then
