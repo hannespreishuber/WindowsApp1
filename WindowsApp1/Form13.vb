@@ -26,4 +26,13 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         ticktack.Change(Threading.Timeout.Infinite, Threading.Timeout.Infinite)
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Task.Run(Sub()
+                     Dim t = Class2.test
+                     BeginInvoke(Sub()
+                                     TextBox1.Text = t
+                                 End Sub)
+                 End Sub)
+    End Sub
 End Class

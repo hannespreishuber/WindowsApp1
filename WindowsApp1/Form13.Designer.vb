@@ -25,6 +25,8 @@ Partial Class Form13
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -52,21 +54,42 @@ Partial Class Form13
         Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(83, 401)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(137, 31)
+        Me.TextBox1.TabIndex = 3
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(263, 401)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(132, 31)
+        Me.Button3.TabIndex = 4
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Form13
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1077, 534)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form13"
         Me.Text = "Form13"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Button1 As Button
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Button2 As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button3 As Button
 End Class
