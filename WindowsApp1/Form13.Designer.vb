@@ -27,6 +27,7 @@ Partial Class Form13
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button1
@@ -70,11 +71,21 @@ Partial Class Form13
         Me.Button3.Text = "Button3"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(83, 13)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(77, 25)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Label1"
+        '
         'Form13
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1077, 534)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button2)
@@ -92,4 +103,5 @@ Partial Class Form13
     Friend WithEvents Button2 As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button3 As Button
+    Friend WithEvents Label1 As Label
 End Class

@@ -29,10 +29,21 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Task.Run(Sub()
-                     Dim t = Class2.test
+                     Dim c As New Class2
+                     AddHandler c.Fortschritt, AddressOf FEvent
+                     Dim t = c.test
                      BeginInvoke(Sub()
                                      TextBox1.Text = t
                                  End Sub)
                  End Sub)
+    End Sub
+
+    Private Sub FEvent(i As Integer)
+        BeginInvoke(Sub()
+                        Label1.Text = i
+
+                        Refresh()
+                    End Sub)
+
     End Sub
 End Class
